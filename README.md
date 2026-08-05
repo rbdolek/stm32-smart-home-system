@@ -176,6 +176,33 @@ An ASP.NET web application was developed to provide remote access to monitoring 
 Finally, all hardware and software components were integrated and tested to validate reliable end-to-end communication.
 
 ---
+# Hardware Setup
+
+The following images show the physical prototype developed during the project.
+
+## STM32 Development Board
+
+<p align="center">
+<img src="images/hardware/stm32-board.jpg" width="700">
+</p>
+
+---
+
+## Complete Hardware Prototype
+
+<p align="center">
+<img src="images/hardware/complete-system.jpg" width="700">
+</p>
+
+---
+
+## Real-Time LCD Output
+
+<p align="center">
+<img src="images/hardware/lcd-temperature-display.jpg" width="700">
+</p>
+The embedded system was developed and tested using an STM32F407 Discovery Board, an LM75BD digital temperature sensor, and a 16x2 I²C LCD display. Temperature measurements were transmitted to the desktop application via UART communication and stored in Microsoft SQL Server for historical analysis.
+---
 
 # Key Features
 
@@ -265,6 +292,7 @@ The following information has been excluded:
 The purpose of this repository is to demonstrate the engineering methodology, software architecture, and technical competencies developed during the project without disclosing confidential business information.
 
 ---
+
 
 # Repository Structure
 
