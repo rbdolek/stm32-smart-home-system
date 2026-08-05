@@ -337,3 +337,119 @@ The following aspects were tested throughout development:
 - End-to-end system communication
 
 Testing confirmed that the overall architecture operated as intended and successfully demonstrated the feasibility of the proposed IoT monitoring solution.
+
+
+# System Features
+
+The Smart Home IoT System was designed as a multi-layered IoT solution that combines embedded hardware, communication technologies, database management, and software applications into a unified monitoring platform.
+
+The following features were implemented throughout the project.
+
+---
+
+## Real-Time Temperature Monitoring
+
+The system continuously measures ambient temperature using the **LM75BD digital temperature sensor** connected to the STM32F407 microcontroller.
+
+Temperature measurements are acquired periodically and processed in real time, providing users with up-to-date environmental information.
+
+---
+
+## Local LCD Display
+
+A **16×2 I²C LCD module** displays the current temperature directly on the embedded device.
+
+This enables immediate local monitoring without requiring access to a computer or web application.
+
+---
+
+## Embedded Data Acquisition
+
+The STM32 embedded firmware continuously collects sensor data and manages communication between all hardware components.
+
+The firmware was developed using the STM32 HAL Library, allowing modular and reliable peripheral management.
+
+---
+
+## Serial Data Communication
+
+Temperature measurements are transmitted from the STM32 development board to the desktop application using **UART communication** through a USB-to-TTL converter.
+
+This communication layer enables continuous data transfer between the embedded system and software application.
+
+---
+
+## Desktop Monitoring Application
+
+A desktop application developed in **C# Windows Forms** provides users with an interface for monitoring temperature measurements.
+
+The application includes:
+
+- User authentication
+- Real-time temperature display
+- Historical measurement visualization
+- Database connectivity
+
+---
+
+## Database Integration
+
+Environmental measurements are stored within a **Microsoft SQL Server** database.
+
+The database architecture supports:
+
+- Persistent data storage
+- Historical measurement records
+- User account management
+- Future reporting capabilities
+
+---
+
+## Web-Based Monitoring
+
+An **ASP.NET web application** allows users to monitor environmental information remotely through a web browser.
+
+The web interface extends the accessibility of the monitoring system beyond the desktop environment.
+
+---
+
+## Modular System Architecture
+
+The project follows a modular architecture where each subsystem performs an independent responsibility while communicating with other system components.
+
+This design improves:
+
+- Maintainability
+- Scalability
+- System reliability
+- Future development
+
+---
+
+## Integrated IoT Solution
+
+The project demonstrates the integration of multiple engineering disciplines, including:
+
+- Embedded Systems
+- Sensor Integration
+- Communication Protocols
+- Desktop Application Development
+- Database Management
+- Web Development
+
+The combination of these technologies provides a complete proof-of-concept IoT monitoring platform.
+
+---
+
+## Technical Documentation
+
+Comprehensive technical documentation was prepared throughout the project, including:
+
+- System architecture
+- Communication flow
+- Database design
+- Software implementation
+- Engineering methodology
+- System evaluation
+
+This documentation improves project maintainability and supports future development.
