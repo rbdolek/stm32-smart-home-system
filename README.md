@@ -108,3 +108,104 @@ The Smart Home IoT System consists of multiple hardware and software components 
                            │      End User       │
                            └─────────────────────┘
 ```
+# Engineering Workflow
+
+The development of the Smart Home IoT System followed a structured engineering approach that combined embedded systems, software development, and database integration.
+
+```text
+Requirements Analysis
+          │
+          ▼
+Hardware Design
+(STM32 + LM75BD + LCD)
+          │
+          ▼
+Embedded Software Development
+(STM32CubeIDE / C)
+          │
+          ▼
+Communication Integration
+(I²C + UART)
+          │
+          ▼
+Desktop Application Development
+(C# WinForms)
+          │
+          ▼
+Database Design
+(Microsoft SQL Server)
+          │
+          ▼
+Web Application Development
+(ASP.NET)
+          │
+          ▼
+System Integration
+          │
+          ▼
+Testing & Validation
+          │
+          ▼
+Technical Documentation
+```
+
+---
+
+## Engineering Process
+
+The project was completed through several engineering phases.
+
+### 1. Requirements Analysis
+
+The system requirements were identified before development began. The primary objective was to build an integrated smart home monitoring system capable of collecting temperature data, storing measurements, and providing users with real-time monitoring capabilities.
+
+---
+
+### 2. Hardware Development
+
+The embedded hardware platform was developed using the STM32F407 Discovery development board together with the LM75BD digital temperature sensor and a 16×2 I²C LCD module.
+
+---
+
+### 3. Embedded Software Development
+
+Firmware was developed in STM32CubeIDE using the HAL library. The embedded software periodically acquired temperature measurements from the sensor and prepared the data for transmission.
+
+---
+
+### 4. Communication Integration
+
+Two communication protocols were implemented:
+
+- I²C for communication between the STM32 and the temperature sensor
+- UART for transmitting sensor data to the desktop application
+
+---
+
+### 5. Desktop Application
+
+A Windows desktop application was developed using C# WinForms. The application received temperature data, displayed current measurements, and interacted with the database.
+
+---
+
+### 6. Database Integration
+
+Microsoft SQL Server was used to store historical temperature measurements together with user information required by the monitoring application.
+
+---
+
+### 7. Web Application
+
+An ASP.NET web application was developed to provide users with remote access to environmental monitoring data through a user-friendly interface.
+
+---
+
+### 8. System Testing
+
+The complete system was tested by validating communication between hardware, desktop software, database, and web application to ensure reliable data transmission and monitoring.
+
+---
+
+### 9. Documentation
+
+Technical documentation was prepared throughout the project to describe the architecture, implementation process, and engineering decisions.
