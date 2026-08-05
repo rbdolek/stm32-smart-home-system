@@ -138,7 +138,42 @@ Testing & Validation
         ▼
 Technical Documentation
 ```
+---
 
+# Hardware Prototype
+
+The following photographs show the physical prototype developed and tested during the project.
+
+The system consists of:
+
+- STM32F407 Discovery Board
+- LM75BD Digital Temperature Sensor
+- 16x2 I²C LCD Display
+- UART Communication
+- Microsoft SQL Server Integration
+
+---
+
+## Hardware Setup
+
+<p align="center">
+<img src="images/hardware/hardware-setup.jpg" width="800">
+</p>
+
+**Figure 1.** STM32F407 Discovery Board connected to the LM75BD digital temperature sensor and the 16×2 I²C LCD module.
+
+---
+
+## Real-Time Temperature Display
+
+<p align="center">
+<img src="images/hardware/lcd-temperature-display.jpg" width="800">
+</p>
+
+**Figure 2.** Real-time temperature measurement displayed on the LCD during system testing.
+
+During testing, temperature measurements acquired from the LM75BD sensor were transmitted to the desktop application through UART communication. The received data was then stored in Microsoft SQL Server for historical monitoring and visualization.
+---
 ---
 
 # Technical Stack
@@ -175,33 +210,6 @@ An ASP.NET web application was developed to provide remote access to monitoring 
 
 Finally, all hardware and software components were integrated and tested to validate reliable end-to-end communication.
 
----
-# Hardware Setup
-
-The following images show the physical prototype developed during the project.
-
-## STM32 Development Board
-
-<p align="center">
-<img src="images/hardware/stm32-board.jpg" width="700">
-</p>
-
----
-
-## Complete Hardware Prototype
-
-<p align="center">
-<img src="images/hardware/complete-system.jpg" width="700">
-</p>
-
----
-
-## Real-Time LCD Output
-
-<p align="center">
-<img src="images/hardware/lcd-temperature-display.jpg" width="700">
-</p>
-The embedded system was developed and tested using an STM32F407 Discovery Board, an LM75BD digital temperature sensor, and a 16x2 I²C LCD display. Temperature measurements were transmitted to the desktop application via UART communication and stored in Microsoft SQL Server for historical analysis.
 ---
 
 # Key Features
