@@ -64,3 +64,47 @@ My responsibilities included:
 - Preparing technical documentation throughout the development process.
 
 ---
+
+# System Architecture
+
+The Smart Home IoT System consists of multiple hardware and software components working together to provide real-time environmental monitoring.
+
+```text
+                    ┌─────────────────────┐
+                    │   LM75BD Sensor     │
+                    │ Temperature Sensor  │
+                    └──────────┬──────────┘
+                               │
+                          I²C Communication
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ STM32F407 Discovery │
+                    │   Embedded System   │
+                    └───────┬─────┬───────┘
+                            │     │
+                       I²C LCD    UART
+                            │     │
+                            ▼     ▼
+                 ┌─────────────┐  USB-TTL
+                 │ 16x2 LCD    │      │
+                 └─────────────┘      ▼
+                           ┌─────────────────────┐
+                           │ C# WinForms Client  │
+                           └──────────┬──────────┘
+                                      │
+                                      ▼
+                           ┌─────────────────────┐
+                           │ Microsoft SQL Server│
+                           └──────────┬──────────┘
+                                      │
+                                      ▼
+                           ┌─────────────────────┐
+                           │ ASP.NET Web System  │
+                           └──────────┬──────────┘
+                                      │
+                                      ▼
+                           ┌─────────────────────┐
+                           │      End User       │
+                           └─────────────────────┘
+```
