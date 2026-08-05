@@ -209,3 +209,131 @@ The complete system was tested by validating communication between hardware, des
 ### 9. Documentation
 
 Technical documentation was prepared throughout the project to describe the architecture, implementation process, and engineering decisions.
+
+
+# Technical Implementation
+
+The Smart Home IoT System was implemented by integrating embedded hardware, communication protocols, database technologies, and software applications into a single monitoring platform. Each system component was designed to perform a specific task while maintaining reliable communication with the remaining modules.
+
+---
+
+## Embedded System Development
+
+The embedded hardware was built using the **STM32F407 Discovery** development board. The firmware was developed in **STM32CubeIDE** using the **STM32 HAL Library**, providing a modular and maintainable software architecture.
+
+The microcontroller continuously monitored environmental temperature by communicating with a digital temperature sensor through the I²C protocol. Measured values were processed in real time and simultaneously transmitted to both the local display and the monitoring application.
+
+Key embedded functionalities included:
+
+- STM32 peripheral configuration
+- GPIO initialization
+- I²C communication
+- UART communication
+- Real-time temperature acquisition
+- Continuous sensor monitoring
+- LCD data visualization
+
+---
+
+## Temperature Sensor Integration
+
+A **LM75BD Digital Temperature Sensor** was integrated into the embedded platform.
+
+The sensor periodically measured ambient temperature and transmitted digital data to the STM32 through the I²C communication interface.
+
+The acquired measurements became the primary data source for both local monitoring and database storage.
+
+---
+
+## LCD Interface
+
+A **16×2 I²C LCD Display** was used to present real-time temperature information directly on the embedded device.
+
+Displaying measurements locally allowed the system to remain usable even without access to the desktop application.
+
+---
+
+## Serial Communication
+
+UART communication was implemented to establish data transfer between the STM32 development board and the desktop computer.
+
+A USB-to-TTL converter was used as the communication bridge.
+
+Temperature measurements were transmitted continuously to the monitoring application, enabling near real-time visualization.
+
+---
+
+## Desktop Application
+
+A desktop monitoring application was developed using **C# Windows Forms**.
+
+The application was responsible for:
+
+- Receiving temperature measurements
+- Displaying current sensor values
+- Managing user authentication
+- Accessing historical measurements
+- Communicating with the SQL Server database
+
+The graphical interface provided users with an intuitive environment for monitoring system status.
+
+---
+
+## Database Design
+
+A **Microsoft SQL Server** database was designed to store both environmental measurements and user information.
+
+The database enabled:
+
+- Historical temperature tracking
+- User account management
+- Data persistence
+- Future reporting capabilities
+
+The structured database architecture improved data accessibility and simplified future system expansion.
+
+---
+
+## Web Application
+
+A web application was developed using **ASP.NET** technologies to provide remote access to monitoring information.
+
+The web interface allowed users to observe environmental data without requiring direct access to the embedded hardware.
+
+This layer demonstrated how embedded systems can be integrated with modern web technologies to create IoT-based monitoring solutions.
+
+---
+
+## System Integration
+
+After each subsystem had been completed individually, all hardware and software components were integrated into a unified architecture.
+
+The complete system successfully demonstrated communication between:
+
+- Temperature Sensor
+- STM32 Embedded System
+- LCD Display
+- UART Communication
+- Desktop Application
+- SQL Server Database
+- ASP.NET Web Application
+
+The integration process verified that sensor data could be collected, transmitted, stored, and presented through multiple software interfaces.
+
+---
+
+## Testing and Validation
+
+System validation focused on ensuring reliable communication between hardware and software components.
+
+The following aspects were tested throughout development:
+
+- Sensor communication accuracy
+- UART data transmission
+- LCD functionality
+- Database connectivity
+- Desktop application performance
+- Web application functionality
+- End-to-end system communication
+
+Testing confirmed that the overall architecture operated as intended and successfully demonstrated the feasibility of the proposed IoT monitoring solution.
