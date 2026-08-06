@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="images/banner.png" width="100%">
-</p>
 
 # Smart Home IoT System Using STM32 and ASP.NET
 
